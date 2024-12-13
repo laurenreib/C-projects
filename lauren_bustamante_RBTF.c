@@ -8,9 +8,9 @@
  * PA6: Recursive Binary Tree
  
  * This program implements a binary tree data structure with functionalities
- * by checking heap ordering, counting nodes with single child,
- * creates mirrored version of tree, and outputs its pre and post order.
- * it also processes iput from the command line & the standard input, to build
+ * By checking heap ordering, counting nodes with a single child,
+ * creates a mirrored version of the tree, and outputs its pre and post-order.
+ * it also processes input from the command line & the standard input, to build
  * a binary tree.
   */
 
@@ -61,7 +61,7 @@ bool insertChildBinaryTree(BinaryTree *, int, char, int);
 void cleanExit(BinaryTree *, int);
 
 /*
- * the main initializes a binary tree where it
+ * The main initializes a binary tree where it
  * processes operations based on the command line arguments.
   */
 
@@ -71,10 +71,7 @@ int main(int argc, char * argv[]) {
   createBinaryTree(&myTree);
   processStdIn(myTree);
 
-  // TODO
-  // process a sequence of BinaryTree operations from command line arguments
-
-  // Free memory from nodes
+  
     
 for (int i = 1; i < argc; i++) {  
       if (strcmp(argv[i], "isordered") == 0) {  
@@ -168,10 +165,7 @@ void postorder( Node *curr )
   }
 }
 
-// TODO
-// return true if-and-only-if the subtree pointed to by
-// the paramter curr is "heap-ordered", that is, the value in
-// each node is smaller than its parent value{
+
 
 /*
  * the isHeapOrdered checks to see if the tree is cooted at 'curr' is
@@ -198,13 +192,11 @@ bool isHeapOrdered(Node *curr) {
  }
 }
  
-// TODO
-// return the number of nodes in the tree that have exactly
-// one child
+
 
 /*
  * numSingleChild counts the number of the nodes in the
- * tree that have one child.
+ * tree that has one child.
   */
 
 int numSingleChild(Node *curr) {
@@ -223,9 +215,7 @@ int numSingleChild(Node *curr) {
 }
 
 
-// TODO
-// transform the subtree pointed to by curr to be its mirror-image,
-// that is, the right child becomes the left child, and vice versa
+
 
 /*
  * makeMirror coverts the subtree that is rooted at 'curr'
